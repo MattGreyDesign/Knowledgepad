@@ -1,0 +1,30 @@
+.keep-line-wrap { display: inline-block; }
+.screenreader-only { @include visually-hidden; }
+
+.two-cols {
+  column-count: 2;
+  column-gap: ($grid-gutter-width * 2);
+}
+
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.pull-right { float: right; }
+
+.text-center-mobile-only {
+  text-align: center;
+  @include breakpoint($screen-sm) { text-align: left; }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.margin-top-normal { margin-top: $grid-gutter-width; }
+
+.spacer--2em {
+  display: block;
+  height: 2em;
+}

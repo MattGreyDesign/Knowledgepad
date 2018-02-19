@@ -1,0 +1,61 @@
+/* GRID */
+$grid-gutter-width: 15px;
+$grid-gutter-spacing: 28px;
+
+/* BREAKPOINTS (BOOTSTRAP DEFAULT) */
+
+// extra small screen / phone
+$screen-xs: 480px;
+
+// small screen / tablet
+$screen-sm: 768px;
+
+// medium screen / desktop
+$screen-md: 992px;
+
+// large screen / wide desktop
+$screen-lg: 1200px;
+
+
+/*
+ * METRICS
+ */
+
+//Base
+$measure-xxxsmall: 4px;
+$measure-xxsmall: 8px;
+$measure-xsmall: 12px;
+$measure-small: 20px;
+$measure-normal: 28px;
+$measure-medium: 32px;
+$measure-large: 64px;
+
+$page-global-padding-desktop: $measure-small;
+$page-global-padding-tablet: $measure-small;
+$page-global-padding-mobile: $measure-xsmall;
+
+/* SITEWIDE */
+$site-base-font-size: 18px;
+$site-base-font-size-desktop: 21px;
+$font-size-small: .7em;
+
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 600;
+
+$site-text-color: rgba(black, 0.7);
+$site-keyline-color: #E5E5E5;
+// $site-accent-color can be found in css/styles.scss
+$site-accent-color--tint-1: mix(black, $site-accent-color, 20%);
+$site-accent-secondary-color: mix(black, $site-accent-color, 20%);
+$site-background-color: #fff;
+$site-neutral-color: #f5f5f5;
+$site-neutral-color--tint-1: #e3e3e3;
+
+$mobile-header-height: 64px;
+
+$element-padding: $measure-medium;
+
+$resource-tile-background-color: $site-accent-color;
+
+$opacity-tint: .9;

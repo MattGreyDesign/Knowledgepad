@@ -1,0 +1,24 @@
+.link-standard {
+  border-bottom: 1px solid;
+  text-decoration: none;
+  color: $site-accent-color;
+
+  &:hover { opacity: .7; }
+}
+
+.link-standard--inverted {
+  color: white;
+
+  &:hover { opacity: .7; }
+}
+
+.link-invert-hover {
+  text-decoration: none;
+  color: $site-accent-color;
+
+  &:hover {
+    border-bottom: 1px solid;
+    text-decoration: none;
+    opacity: .7;
+  }
+}

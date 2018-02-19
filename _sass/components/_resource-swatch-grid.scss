@@ -1,0 +1,48 @@
+.resource-swatch-grid {
+  display: block;
+
+  @include breakpoint($screen-sm) {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: $grid-gutter-spacing;
+  }
+
+  .resource-swatch {
+    grid-column: auto / span 6;
+    margin: $grid-gutter-width 0;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    line-height: 1.4;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+
+    @include breakpoint($screen-md) {
+      grid-column: auto / span 3;
+    }
+  }
+
+  .resource-swatch__details {
+    background: white;
+    padding: $grid-gutter-width;
+    font-size: .8em;
+  }
+
+  .resource-swatch__title {
+    text-transform: uppercase;
+    font-size: .75em;
+    margin-bottom: 3px;
+    letter-spacing: 1px;
+    font-weight: $font-weight-medium;
+  }
+  .resource-swatch__hex,
+  .resource-swatch__rgb,
+  .resource-swatch__cmyk {
+    font-family: monospace;
+    user-select: all;
+  }
+
+
+}

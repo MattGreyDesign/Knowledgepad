@@ -1,0 +1,76 @@
+*, *:before, *:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  color: $site-text-color;
+  font-family: sans-serif;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: $site-base-font-size;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+
+  @include breakpoint($screen-sm) { font-size: $site-base-font-size-desktop; }
+}
+
+.intro-hero-copy {
+  font-size: 1.5em;
+  line-height: 1.4;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-weight: $font-weight-normal;
+
+  @include breakpoint($screen-sm) {
+    font-size: 2em;
+    margin-top: .6em;
+    margin-bottom: .6em;
+  }
+
+  @include breakpoint($screen-md) { font-size: 2.2em; }
+}
+
+.heading-top {
+  font-size: 2.2em;
+  font-weight: $font-weight-bold;
+  margin-top: 1.6em;
+  margin-bottom: 1em;
+}
+
+.heading-section {
+  font-size: 1.5em;
+  font-weight: $font-weight-bold;
+  margin-top: $grid-gutter-spacing;
+  margin-bottom: .6em;
+  line-height: 1.4;
+}
+
+.heading-module {
+  margin-bottom: .8em;
+  font-weight: $font-weight-medium;
+  font-size: 1.2em;
+  line-height: 1.38;
+}
+
+.heading-label {
+  font-size: 1em;
+  margin-top: 1.5em;
+  margin-bottom: .6em;
+  font-weight: $font-weight-bold;
+}
+
+.body-text,
+.body-text p {
+  line-height: 1.65;
+  margin-bottom: 1em;
+}
+
+.heading-resource-section {
+  margin-top: 1.4em;
+  margin-bottom: 1em;
+  font-weight: $font-weight-medium;
+  font-size: 1.4em;
+}
+
+strong,
+b { font-weight: $font-weight-bold; }

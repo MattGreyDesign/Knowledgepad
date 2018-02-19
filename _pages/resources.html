@@ -1,0 +1,44 @@
+---
+layout: default
+permalink: /
+---
+
+<div class="hero-leader">
+  <div class="search">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-24">
+          <div class="search__box">
+            <input class="search__field" type="text" id="quicksearch" placeholder="What are you looking for?" autofocus/>
+            {% include assets/icons/icon-search.svg fill_color="#ffffff" %}
+          </div>
+
+          <div id="categoryFilters" class="button-toggle-group">
+            <button class="button-toggle button-toggle--is-checked" data-filter="*">All</button>
+            {% assign categories = site.resource-docs | group_by: 'category' | sort: 'name' %}
+            {% for category in categories %}
+            <button class="button-toggle" data-filter=".{{ category.name | downcase }}">{{ category.name }}</button>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container resources">
+  <ul class="row isotopeGrid">
+    {% assign resources = site.resource-docs %}
+    {% for resource in resources %}
+      <li class="col-xs-24 col-sm-12 col-md-8 col-lg-6 resource-tile-sort {{ resource.category | downcase }}">
+        <a data-tilt class="resource-tile js-tilt" href="{{ site.baseurl }}{{ resource.url }}">
+          <h4 class="resource-tile__category">{{ resource.category }}</h4>
+          <h3 class="resource-tile__title">{{ resource.title }}</h3>
+          <span class="resource-tile__tags">{{ resource.tags | join: ', '}}</span>
+        </a>
+      </li>
+    {% endfor %}
+
+    <li class="col-xs-24 no-results">No results found</li>
+  </ul>
+</div>

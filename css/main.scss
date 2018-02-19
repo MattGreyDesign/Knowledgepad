@@ -1,0 +1,38 @@
+---
+layout: null
+sitemap: false
+---
+@charset "utf-8";
+$site-accent-color: {{ site.site-accent-color}};
+
+// Vendor
+@import "reset";
+
+@import "variables";
+@import "mixins-functions";
+@import "responsive-utilities";
+
+//Base
+@import "base/grid";
+@import "base/utilities";
+@import "base/images";
+@import "base/links";
+@import "base/typography";
+@import "base/buttons";
+@import "base/page";
+
+// Components
+@import "components/header";
+@import "components/footer";
+@import "components/nav";
+
+@import "components/resource-tile";
+@import "components/resource-header";
+@import "components/resource-swatch-grid";
+
+@import "components/hero-leader";
+@import "components/search";
+
+// Layouts
+@import "layouts/resources";
+@import "layouts/resource";

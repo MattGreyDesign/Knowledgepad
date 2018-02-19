@@ -1,0 +1,8 @@
+.hero-leader {
+  background-color: $site-accent-color;
+  padding: ($grid-gutter-width * 2) 0;
+
+  @include breakpoint($screen-sm) {
+    padding: ($grid-gutter-width * 3) 0;
+  }
+}

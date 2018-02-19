@@ -1,0 +1,16 @@
+---
+layout: resource
+---
+
+<div class="resource-swatch-grid">
+  {% for swatch in page.swatches %}
+    <div class="resource-swatch" style="background-color: {{ swatch.hex }}">
+      <div class="resource-swatch__details">
+        <div class="resource-swatch__title">{{ swatch.title }}</div>
+        <div class="resource-swatch__hex">{{ swatch.hex }}</div>
+        <div class="resource-swatch__rgb">{{ swatch.rgb }}</div>
+        <div class="resource-swatch__cmyk">{{ swatch.cmyk }}</div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

@@ -1,4 +1,4 @@
-# Knowledgepad
+# Alliants Brand Resources
 
 ## Setup
 

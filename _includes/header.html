@@ -1,0 +1,29 @@
+<header class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 text-center-mobile-only">
+        <a class="header__logo-lockup" href="{{ site.baseurl }}/">
+          <div class="header__logo">
+            {% include assets/logos/alliants-logo-inline.svg fill_color="#ffffff" %}
+          </div>
+          <h1 class="header__title">{{ site.title }}</h1>
+        </a>
+      </div>
+      <div class="col-md-14">
+        <ul class="nav">
+          {% for nav_item in site.navigation %}
+            <li class="nav__item">
+              <a class="nav__link" href="{{ nav_item.url }}">{{ nav_item.label }}</a>
+            </li>
+          {% endfor %}
+
+          {% if site.parent-site %}
+            <li class="nav__item">
+              <a class="nav__link nav__link--highlighted" href="{{ site.parent-site.url }}">{{ site.parent-site.label }}</a>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>

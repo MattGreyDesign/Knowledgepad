@@ -1,0 +1,35 @@
+.header {
+  @extend .clearfix;
+  background-color: $site-accent-color;
+  padding: ($grid-gutter-width * 2) 0;
+  border-bottom: 1px solid $site-accent-color--tint-1;
+
+  .header__logo-lockup {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .header__logo {
+    display: inline-block;
+
+    .alliants-logo-inline {
+      width: auto;
+      height: 32px;
+    }
+  }
+
+  .header__title {
+    display: inline-block;
+    position: relative;
+    font-weight: 400;
+    color: white;
+    font-size: 26px;
+    transform: translate(0, -1px);
+    text-transform: lowercase;
+    letter-spacing: -.025em;
+    border-left: 2px solid white;
+    margin-left: 10px;
+    padding-left: 14px;
+    line-height: 1.2;
+  }
+}

@@ -1,0 +1,90 @@
+---
+layout: default
+---
+<div class="hero-leader">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-24">
+        <div class="resource__header">
+          <h2 class="resource__category">{{ page.category }}</h2>
+          <h1 class="resource__title">{{ page.title }}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% if page.sources %}
+  <div class="resource__sources">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-24">
+          <ul class="resource__source-list">
+            {% for source in page.sources %}
+              <a class="resource__source button-pill" title="Go to resource" href="{{ source.resource_path }}">{{ source.title }}</a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% else %}
+  <div class="spacer--2em"></div>
+{% endif %}
+
+<main class="resource__content container">
+  <div class="row">
+    <div class="col-xs-24">
+      {{ content }}
+    </div>
+  </div>
+</main>
+
+{% if page.asset_sections %}
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-24">
+        <h2 class="heading-resource-section">Resources</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-24">
+        <div class="resource__downloads">
+          {% for section in page.asset_sections %}
+            <div class="resource__download">
+              <div class="resource__download-header">
+                <h3 class="resource__download-title">{{ section.title }}</h3>
+                {% if section.description %}
+                  <p class="resource__download-description">{{ section.description }}</p>
+                {% endif %}
+              </div>
+              {% if section.preview_image %}
+                <div class="resource__download-preview" {% if section.preview_background_color %}style="background-color: #{{ section.preview_background_color }}"{% endif %}>
+                  <img class="resource__download-preview-image" src="{{ section.preview_image }}" alt="">
+                </div>
+              {% endif %}
+
+              {% if section.formats %}
+                <div class="resource__download-formats">
+                  {% for format in section.formats %}
+
+                    {% if format.title == "Preview"%}
+                      <a class="resource__download-format" title="{% if format.link_only %}Go to resource {% else %} Download in {{ format.title }} format{% endif %}" href="{{ format.resource_path }}" {% unless format.link_only %}download{% endunless %}>
+                        {% if format.link_only %}{% include assets/icons/icon-view.svg fill_color="#797c85" %}{% endif %}{{ format.title }}
+                      </a>
+                    {% else %}
+                      <a class="resource__download-format" title="{% if format.link_only %}Go to resource {% else %} Download in {{ format.title }} format{% endif %}" href="{{ format.resource_path }}" {% unless format.link_only %}download{% endunless %}>
+                      {% if format.link_only %}{% include assets/icons/icon-link.svg fill_color="#797c85" %}{% else %}{% include assets/icons/icon-download.svg fill_color="#797c85" %}{% endif %}{{ format.title }}
+                    </a>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}

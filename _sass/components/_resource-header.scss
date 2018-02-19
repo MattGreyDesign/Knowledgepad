@@ -1,0 +1,28 @@
+.resource__header {
+  @extend .clearfix;
+  text-align: center;
+
+  @include breakpoint($screen-sm) {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .resource__category {
+    font-size: .7em;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    font-weight: 700;
+    margin-bottom: 1em;
+    opacity: .6;
+  }
+
+  .resource__title {
+    font-weight: 300;
+    color: white;
+    font-size: 2.2em;
+
+    @include breakpoint($screen-sm) {
+      font-size: 2.4em;
+    }
+  }
+}

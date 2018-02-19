@@ -1,0 +1,133 @@
+.resource__sources {
+  padding: 1em 0 .5em 0;
+  border-bottom: 1px solid $site-keyline-color;
+
+  .resource__source-list {
+    display: block;
+    text-align: center;
+  }
+
+  .resource__source {
+    display: inline-block;
+    margin-right: .6em;
+    margin-bottom: .5em;
+  }
+}
+
+.resource__downloads {
+  display: block;
+
+  @include breakpoint($screen-md) {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: $grid-gutter-spacing;
+  }
+}
+
+.resource__download {
+  grid-column: auto / span 6;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $site-keyline-color;
+  margin-bottom: $grid-gutter-spacing;
+  border-radius: 6px;
+  overflow: hidden;
+  background: $site-neutral-color;
+
+  @include breakpoint($screen-lg) { grid-column: auto / span 4; }
+}
+
+.resource__download-header {
+  background: $site-neutral-color;
+  margin-bottom: -1px;
+}
+
+.resource__download-title {
+  font-weight: $font-weight-medium;
+  padding: .7em $grid-gutter-width .5em;
+  line-height: 1.4;
+}
+
+.resource__download-description {
+  padding: 0 $grid-gutter-width 1em;
+  font-size: .8em;
+  line-height: 1.4;
+  opacity: $opacity-tint;
+}
+
+.resource__download-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  background: white;
+  border-top: 1px solid $site-keyline-color;
+}
+
+.resource__download-preview-image {
+  max-height: 164px;
+  width: auto;
+  display: block;
+  margin: 0;
+  margin: 1em $grid-gutter-width;
+}
+
+.resource__download-formats {
+  @extend .clearfix;
+  border-top: 1px solid $site-keyline-color;
+  display: block;
+  background: $site-neutral-color;
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  .resource__download-format {
+    display: block;
+    flex-grow: 1;
+    float: left;
+    padding: .6em .7em .6em .6em;
+    border-right: 1px solid $site-keyline-color;
+    border-bottom: 1px solid $site-keyline-color;
+    margin-left: -1px;
+    margin-bottom: -1px;
+    margin-right: -1px;
+    text-decoration: none;
+    color: $site-text-color;
+    font-size: .9em;
+    text-align: center;
+
+    &:hover {
+      background: $site-neutral-color--tint-1;
+      text-decoration: underline;
+    }
+  }
+
+  .resource__download-format svg {
+    height: 1.4em;
+    width: auto;
+    position: relative;
+    vertical-align: text-top;
+  }
+}
+
+.resource__content {
+  margin-bottom: 1em;
+
+  h2 { @extend .heading-resource-section; }
+  h3 { @extend .heading-label; }
+
+  p {
+    line-height: 1.6;
+    margin-bottom: .9em;
+    opacity: .9;
+  }
+
+  a {
+    color: $site-accent-color;
+    text-decoration: none;
+    border-bottom: 1px solid ;
+    display: inline-block;
+    line-height: 1.1;
+  }
+}
